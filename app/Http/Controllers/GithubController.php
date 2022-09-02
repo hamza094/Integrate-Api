@@ -8,12 +8,15 @@ use Illuminate\Http\Request;
 
 class GithubController extends Controller
 {
-   public function index(){
+   public function index()
+   {
+     //Get user information
      $response = Http::get('https://api.github.com/users/taylorotwell');
-$getResponse=$response->json();
+     $getResponse=$response->json();
 
-//$response = Http::withToken('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')->get('https://api.github.com/users/taylorotwell/hovercard?subject_type=repository');
-
+     //Get data wit OAuth Token
+     //$response = Http::withToken(config('services.api.github'))->get('https://api.github.com/users/taylorotwell/hovercard?subject_type=repository');
+     
      return view('api.github',compact('getResponse'));
    }
 }

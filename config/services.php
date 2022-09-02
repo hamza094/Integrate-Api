@@ -21,6 +21,10 @@ return [
         'scheme' => 'https',
     ],
 
+    'api' => [
+      'github'=> env('GITHUB_API'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
