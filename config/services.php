@@ -23,6 +23,7 @@ return [
 
     'api' => [
       'github'=> env('GITHUB_API'),
+      'sportmonks'=>env('SPORTMONKS_API'),     
     ],
 
     'postmark' => [

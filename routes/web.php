@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\GithubController;
+
+use App\Http\Controllers\FootballController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +22,10 @@ Route::get('/', function () {
 });
 
 Route::get('github',[GithubController::class,'index']);
+
+Route::get('football',[FootballController::class,'index']);
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
